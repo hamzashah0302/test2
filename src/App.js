@@ -8,7 +8,7 @@ function App() {
   const [password, setpassword] = useState('')
 
   const handleLogin =async()=>{
-    let res = await axios.post('https://morosoft.herokuapp.com/',{username,password})
+    let res = await axios.post('https://morosoft.herokuapp.com',{username,password})
     // console.log(res.data.data.user)
     if(res.data.data.user != undefined) {setisLogin(true)}
   }
