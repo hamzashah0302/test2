@@ -42,7 +42,7 @@
                 getItems()}
         }   
         const addItem =()=>{
-            axios.post('/save',{id,name})
+            axios.post('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/save',{id,name})
             setid('')
             setname('')
             getItems()
