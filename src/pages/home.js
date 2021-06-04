@@ -43,9 +43,12 @@
         }   
         const addItem =()=>{
             axios.post('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/save',{id,name})
-            setid('')
-            setname('')
-            getItems()
+            if(res.status==200){
+                setid('')
+                setname('')
+                getItems()
+            }
+            
         }
         var columns = [
             {
