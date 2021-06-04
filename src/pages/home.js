@@ -19,7 +19,7 @@
         };
 
         const getItems=async ()=>{
-            let res =await axios.get('https://morosoft.herokuapp.com/find')
+            let res =await axios.get('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/find')
             setitems(res.data)
         }
         useEffect(() => {
