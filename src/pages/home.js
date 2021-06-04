@@ -41,8 +41,8 @@
                 handleCancel() //close modal
                 getItems()}
         }   
-        const addItem =()=>{
-            axios.post('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/save',{id,name})
+        const addItem =async()=>{
+            let res =await axios.post('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/save',{id,name})
             if(res.status==200){
                 setid('')
                 setname('')
