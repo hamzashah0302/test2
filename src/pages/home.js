@@ -19,7 +19,7 @@
         };
 
         const getItems=async ()=>{
-            let res =await axios.get('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/find')
+            let res =await axios.get('https://morosoft.herokuapp.com/find')
             setitems(res.data)
         }
         useEffect(() => {
@@ -32,17 +32,17 @@
             
         }
         const handleDelete =async(id)=>{
-            let res = await axios.post('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/delete',{id})
+            let res = await axios.post('https://morosoft.herokuapp.com/delete',{id})
             if(res.status==200) getItems() // called getItems() to refesh data from server
         }
         const saveUpdate = async()=>{
-            let res = await axios.post('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/update',updateItem)
+            let res = await axios.post('https://morosoft.herokuapp.com/update',updateItem)
             if(res.status ==200) {
                 handleCancel() //close modal
                 getItems()}
         }   
         const addItem =async()=>{
-            let res =await axios.post('https://cors-anywhere.herokuapp.com/https://morosoft.herokuapp.com/save',{id,name})
+            let res =await axios.post('https://morosoft.herokuapp.com/save',{id,name})
             if(res.status==200){
                 setid('')
                 setname('')
